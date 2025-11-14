@@ -50,7 +50,7 @@ export function incline(
 ): LvovichPersonT {
   const res = {} as LvovichPersonT;
 
-  const gender = getGender(person);
+  const gender = person.gender ?? getGender(person);
   res.gender = gender;
 
   const { first, last, middle } = person;
